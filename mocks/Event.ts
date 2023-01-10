@@ -1,0 +1,81 @@
+import type { ScheduleResponse, Student } from '~/types';
+
+export const student: Student = {
+  id: 1,
+  firstName: 'First',
+  lastName: 'Last',
+  email: 'email@gmail.com',
+  phone: '+3809311111111',
+  dateBirth: new Date(2000, 1, 1),
+  isDeleted: false,
+  isActivated: true,
+  activatedAt: new Date(),
+  createdAt: new Date(),
+  updatedAt: new Date(),
+  avatar: {
+    id: 1,
+    imageType: 'avatar',
+    fileName: 'filename.jpg',
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    fileUrl: 'https://localhost/image/avatar/image_123456.jpg',
+  },
+};
+
+export const schedule: ScheduleResponse = {
+  createdAt: new Date(),
+  startDateTime: new Date(2023, 1, 1, 10, 15, 0),
+  endDateTime: new Date(2023, 1, 1, 11, 15, 0),
+  id: 0,
+  repeatWeekly: false,
+  status: '1',
+  updatedAt: new Date(),
+  group: {
+    id: 1,
+    teacherId: 123,
+    title: 'Group 1',
+    quickTranslation: true,
+    lessonDuration: 45,
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    students: [student],
+    avatar: {
+      id: 1,
+      imageType: 'avatar',
+      fileName: 'filename.jpg',
+      createdAt: new Date(),
+      updatedAt: new Date(),
+      fileUrl: 'https://localhost/image/avatar/image_123456.jpg',
+    },
+  },
+  student: student,
+};
+
+export const schedule1: ScheduleResponse = {
+  createdAt: new Date(),
+  startDateTime: new Date(2023, 1, 3, 12, 15, 0),
+  endDateTime: new Date(2023, 1, 3, 14, 15, 0),
+  id: 1,
+  repeatWeekly: false,
+  status: '1',
+  updatedAt: new Date(),
+  student: student,
+  group: {
+    id: 1,
+    teacherId: 123,
+    title: 'Group 1',
+    quickTranslation: true,
+    lessonDuration: 45,
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    students: [student],
+    avatar: {
+      id: 1,
+      imageType: 'avatar',
+      fileName: 'filename.jpg',
+      createdAt: new Date(),
+      updatedAt: new Date(),
+      fileUrl: 'https://localhost/image/avatar/image_123456.jpg',
+    },
+  },
+};
